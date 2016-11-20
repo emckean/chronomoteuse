@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/emckean/chronomoteuse/issues"
   },
-  "homepage": "https://github.com/emckean/chronomoteuse#readme"
+  "homepage": "https://github.com/emckean/chronomoteuse#readme",
+  "dependencies": {
+    "chronomoteuse_files": "file:lambdafiles",
+    "node-aws-lambda": "^0.1.8",
+    "tracery-grammar": "^2.7.3",
+    "twit": "^2.2.4"
+  }
 }

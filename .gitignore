@@ -1,3 +1,9 @@
+
+#config
+config.js
+lambdafiles/*
+lambda-config.js
+
 # Logs
 logs
 *.log
