@@ -1,0 +1,22 @@
+{
+  "name": "chronomoteuse",
+  "version": "1.0.0",
+  "description": "a time-traveling twitterbot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emckean/chronomoteuse.git"
+  },
+  "keywords": [
+    "bot"
+  ],
+  "author": "Erin McKean",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emckean/chronomoteuse/issues"
+  },
+  "homepage": "https://github.com/emckean/chronomoteuse#readme"
+}
