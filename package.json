@@ -20,9 +20,18 @@
   },
   "homepage": "https://github.com/emckean/chronomoteuse#readme",
   "dependencies": {
-    "chronomoteuse_files": "file:lambdafiles",
+    "chronomoteuse_files": "file:///Users/emckean/Code/chronomoteuse/lambdafiles",
     "node-aws-lambda": "^0.1.8",
     "tracery-grammar": "^2.7.3",
     "twit": "^2.2.4"
+  },
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-install": "^0.6.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-zip": "^3.2.0",
+    "jshint": "^2.9.4",
+    "run-sequence": "^1.2.2"
   }
 }

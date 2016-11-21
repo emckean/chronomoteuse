@@ -21,26 +21,67 @@ function getYear() {
 var grammar = tracery.createGrammar({
   'year' : getYear(),
   
-  'things' : ['Women', 'Robots', 'Science-fiction writers', 'Dogs', 'Superintelligent AIs', 'Senators', 'Mothers'],
+  'things' : [
+    'Women', 
+    'Bureaucrats', 
+    'Robots', 
+    'Science-fiction writers', 
+    'Dogs', 
+    'Cats',
+    'Uplifted bunnies',
+    'Superintelligent AIs', 
+    'Senators', 
+    'Mothers', 
+    'Anti-heroes',
+    'Shamans',
+    'Superhumans',
+    'Poets',
+    'Bartenders',
+    'Historians',
+    'Self-aware security cameras'
+    ],
  
-  'result' : ['control the government.', 
-  'are in charge.', 
-  'are made of titanium.', 
-  'refuse to use mobile phones.',
-  'have nuclear weapons.', 
-  'watch television.', 
-  'use the internet for nostalgia\'s sake.', 
-  'are the only ones who tweet.',
-  'use sentient bicycles.',
-  'play in jazz bands twenty-four hours a day.', 
-  'travel in space.', 
-  'have flying cars.', 
-  'rule the world.', 
-  'live in geodesic domes.',
-  'have self-driving houses.',
-  'dismantled the surveillance state.'],
+  'result' : [
+    'control the government.', 
+    'install ad-blockers.',
+    'practice \'serious journalism\'',
+    'are in charge.', 
+    'regularly visit the moon for weekend getaways.',
+    'sent Elon Musk to Mars by himself to think about what he\'s done.',
+    'brought about the Singularity for lulz.',
+    'are made of titanium.', 
+    'refuse to use mobile phones.',
+    'have nuclear weapons.', 
+    'outlawed biowarfare.',
+    'have created amusement parks for their favorite YA dystopias.',
+    'stopped using the word \'hope\'.',
+    'brought about global anarchy.',
+    'live in giant airships.',
+    'have self-driving jetpacks.',
+    'reproduce parthenogenically.',
+    'create anime plots via deep learning.',
+    'watch television.', 
+    'use the internet for nostalgia\'s sake.', 
+    'are the only ones who tweet.',
+    'use sentient bicycles.',
+    'play in jazz bands twenty-four hours a day.', 
+    'travel in space.', 
+    'have flying cars.', 
+    'rule the world.', 
+    'live in geodesic domes.',
+    'have self-driving houses.',
+    'dismantled the surveillance state.',
+    'all have tiny houses.',
+    'never marry.',
+    'stopped breathing oxygen.',
+    'turned back the sea-level rise.',
+    'eradicated the patriarchy.',
+    'have incredibly charismatic children.',
+    'toppled Facebook.',
+    'control the means of production.'
+    ],
 
-  'origin': ['I have traveled to the year #year#. Things are so different! #things# #result#']
+  'origin': ['I have traveled to the year #year#. Things are so different here! #things# #result#']
 });
 
 function phraseLengthOK(phrase) {
@@ -55,30 +96,31 @@ function phraseLengthOK(phrase) {
 function pickPhrase(){
 	grammar.addModifiers(tracery.baseEngModifiers); 
 	var phrase = grammar.flatten('#origin#');
-
     
-    if (phraseLengthOK(phrase) && phrase !== 'undefined') {
-        return phrase;
-      }
-      else {
-        myPhrase = pickPhrase();
-      }
+  if (phraseLengthOK(phrase)) {
+     console.log('this is the first second:' + phrase);
+      return phrase;
+    }
+    else {
+      console.log('got here!')
+      pickPhrase();
+    }
   }
 
-// exports.handler = function tweetChronomoteuse(event, context) {
+exports.handler = function tweetChronomoteuse(event, context) {
     var phraseToTweet = pickPhrase();
-    console.log(phraseToTweet);
+   
   
-  // 	T.post('statuses/update', { status: phraseToTweet }, function(err, reply) {
-  //             if (err) {
-  //               console.log('error:', err);
-  //               context.fail();
-  //             }
-  //             else {
-  //               console.log('tweet:', reply);
-  //               context.succeed();
-  //             }
-  //           });
-  // };  
+  	T.post('statuses/update', { status: phraseToTweet }, function(err, reply) {
+              if (err) {
+                console.log('error:', err);
+                context.fail();
+              }
+              else {
+                console.log('tweet:', reply);
+                context.succeed();
+              }
+            });
+  };  
 
 
