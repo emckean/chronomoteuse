@@ -38,6 +38,13 @@ var grammar = tracery.createGrammar({
     'Poets',
     'Bartenders',
     'Historians',
+    'Dentists',
+    'Venture capitalists',
+    'Self-styled messiahs',
+    'Selfie artists',
+    'Brave little toasters',
+    'Olympic athletes',
+    'Worriers',
     'Self-aware security cameras'
     ],
  
@@ -78,7 +85,25 @@ var grammar = tracery.createGrammar({
     'eradicated the patriarchy.',
     'have incredibly charismatic children.',
     'toppled Facebook.',
-    'control the means of production.'
+    'control the means of production.',
+    'give the President wedgies.',
+    'administer block grants for graffiti.',
+    'never admit defeat.',
+    'defer to their in-home automation systems.',
+    'work for peace.',
+    'sing in virtual choirs.',
+    'muster into militia regiments.',
+    'connive to steal famous artworks.',
+    'are working to build their own time machines! Uh-oh ...',
+    'invent new musical instruments.',
+    'disenfranchised the rich.',
+    'invented a true all-day sucker.',
+    'bake IoT cakes.',
+    'live on the ocean floor.',
+    'run on solar power.',
+    'conduct virtual post-mortems.',
+    'replace their femurs with titanium',
+    'speak only in cryptic crossword clues.'
     ],
 
   'origin': ['I have traveled to the year #year#. Things are so different here! #things# #result#']
